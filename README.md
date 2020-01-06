@@ -2,7 +2,6 @@
 
 A new Flutter application.
 
-Released apk in build\app\outputs\apk\release\app-release.apk (33.1MB).
 
 ## Getting Started
 
