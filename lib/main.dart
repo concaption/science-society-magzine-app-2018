@@ -1,12 +1,9 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
-
-
-
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -16,84 +13,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String assetPDFPath = "";
-
-
-
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Container(
-            decoration: BoxDecoration(color: Colors.redAccent),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Expanded(
-                flex: 2,
-                child: Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 50.0,
-                        child: Icon(
-                          Icons.shopping_cart,
-                          color: Colors.greenAccent,
-                          size: 50.0,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10.0),
-                      ),
-                      Text(
-                        "ABC",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24.0),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CircularProgressIndicator(),
-                    Padding(
-                      padding: EdgeInsets.only(top: 20.0),
-                    ),
-                    Text(
-                      "ABC",
-                      softWrap: true,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18.0,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-              )
-            ],
-          )
-        ],
-      ),
-    );
-  }
-
-
-
-
-
 
   @override
   void initState() {
@@ -121,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       throw Exception("Error opening the magzine");
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -129,7 +48,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
            backgroundColor: Colors.blue,
-          title: Text("UET Science Society Magzine"),
+          title: Text("UET Science Society Magazine"),
         ),
         body: Center(
           child: Builder(
@@ -179,7 +98,7 @@ class _PdfViewPageState extends State<PdfViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Magzine 2019"),
+        title: Text("Magazine 2019"),
       ),
       body: Stack(
         children: <Widget>[
