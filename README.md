@@ -1,4 +1,4 @@
-# science_society
+# Science-Society-Magzine-App-Flutter
 
 A new Flutter application.
 
